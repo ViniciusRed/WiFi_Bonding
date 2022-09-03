@@ -8,8 +8,8 @@
 # $2: parent install dir, optional
 # example: sh install-tarball.sh acc /data/data/github.vr25.acc/files
 
-id=acc
-domain=vr25
+id=WiFi_Bonding
+domain=ViniciusRed
 data_dir=/data/adb/$domain/${1:-$id}-data
 
 # log
