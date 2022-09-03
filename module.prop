@@ -1,6 +1,7 @@
-id=WiFi_Bonding
+id=WiFiBonding
 name=Wifi Bonding
 version=0.1
 versionCode=0.1
 author=ViniciusRed
 description=Doubles your wi-fi bandwith by modifying WCNSS_qcom_cfg.ini.
+updateJson=https://raw.githubusercontent.com/
