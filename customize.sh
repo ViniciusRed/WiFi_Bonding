@@ -1,3 +1,5 @@
+#!/system/bin/sh
+
 [ -x "$(which magisk)" ] && MIRRORPATH=$(magisk --path)/.magisk/mirror || unset MIRRORPATH
 array=$(find /system /vendor -name WCNSS_qcom_cfg.ini)
 for CFG in $array
