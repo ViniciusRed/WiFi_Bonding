@@ -23,4 +23,4 @@ gForce1x1Exception=0
 
 ### Official Module Creator
 
-Github: [GitHub](https://github.com/Magisk-Modules-Repo/wifi-bonding)
+Creator Github: [GitHub](https://github.com/Magisk-Modules-Repo/wifi-bonding)
