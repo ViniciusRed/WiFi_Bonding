@@ -2,9 +2,9 @@
     "busybox": "https://github.com/Magisk-Modules-Repo/busybox-ndk",
     "changelog": "https://raw.githubusercontent.com/ViniciusRed/WiFi_Bonding/main/changelog.md",
     "curl": "https://github.com/Zackptg5/Cross-Compiled-Binaries-Android/tree/master/curl",
-    "tgz": "https://github.com/VR-25/acc/releases/download/v2022.7.30-dev/acc_v2022.7.30-dev_202207300.tgz",
+    "tgz": "https://github.com/ViniciusRed/WiFi_Bonding/releases/latest/download//WiFi_Bonding.tgz",
     "tgzInstaller": "https://github.com/VR-25/acc/releases/download/v2022.7.30-dev/install-tarball.sh",
     "version": "0.1",
     "versionCode": 0.1,
-    "zipUrl": "https://github.com/VR-25/acc/releases/download/v2022.7.30-dev/acc_v2022.7.30-dev_202207300.zip"
+    "zipUrl": "https://github.com/ViniciusRed/WiFi_Bonding/releases/latest/download/WiFi_Bonding.zip"
 }
