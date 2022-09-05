@@ -17,7 +17,7 @@ jobs:
     
     steps:
       - run: |
-      build
+      build.bat
     - name: Checkout code
       uses: actions/checkout@v3
       - name: Create Release
