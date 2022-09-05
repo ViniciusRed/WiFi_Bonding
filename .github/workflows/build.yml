@@ -14,7 +14,7 @@ on:
 jobs:
   build:
     name: Creating Module Zip
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     
     steps:
       - run: |
