@@ -1,5 +1,5 @@
 name: Build Module
-on: [push]
+on:
 jobs:
   build:
     runs-on: ubuntu-latest
