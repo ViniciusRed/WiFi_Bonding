@@ -1,3 +1,4 @@
+### redo the code
 [ -x "$(which magisk)" ] && MIRRORPATH=$(magisk --path)/.magisk/mirror || unset MIRRORPATH
 array=$(find /system /vendor -name WCNSS_qcom_cfg.ini)
 for CFG in $array
@@ -12,3 +13,12 @@ sed -i '/gChannelBondingMode24GHz=/d;/gChannelBondingMode5GHz=/d;/gForce1x1Excep
 }
 done
 [[ -z $SELECTPATH ]] && abort "- Installation FAILED. Your device didn't support WCNSS_qcom_cfg.ini." || { mkdir -p $MODPATH/system; mv -f $MODPATH/vendor $MODPATH/system/vendor;}
+### write in the code for when you disable the module, it goes back to the original config
+
+
+
+
+
+
+
+### Find out how to make bank applications do not recognize the module
