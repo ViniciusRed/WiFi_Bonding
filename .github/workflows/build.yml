@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: Creating Module Zip
         run: |
-         git clone ViniciusRed/WiFi_Bonding
+         git clone https://github.com/ViniciusRed/WiFi_Bonding.git
          cd WiFi_Bonding
          build
 
