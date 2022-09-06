@@ -1,16 +1,24 @@
 name: Build Module
-on:
- workflow_dispatch:
-  jobs:
-   build:
-    name: Creating Module Zip
+
+on: 
+  workflow_dispatch:
+    inputs:
+      versionLevel:
+        description: 'Version Number'     
+        required: true
+      changeLog:
+        description: 'Changelog'
+        required: true
+        default: 'Update'
+
+jobs:
+  build:
     runs-on: ubuntu-latest
-    
     steps:
-      - uses: actions/checkout@v3
+      - name: Creating Module Zip
         run: build
 
-       - name: Create Release
+      - name: Create Release
         id: create_release
         uses: actions/create-release@v1
         env:
@@ -31,7 +39,6 @@ on:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./Wifi_Bonding-v${{ github.event.inputs.versionLevel }}.zip
+          asset_path: ./WiFi_Bonding-v${{ github.event.inputs.versionLevel }}.zip
           asset_name: WiFi_Bonding-v${{ github.event.inputs.versionLevel }}.zip
           asset_content_type: application/zip
-      
