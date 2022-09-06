@@ -11,6 +11,9 @@ on:
         required: true
         default: 'Update'
 
+env:
+  
+
 jobs:
   build:
     runs-on: windows-latest
@@ -21,6 +24,10 @@ jobs:
          start Wifi_Bonding\.github\build
          Get-Content -Path Wifi_Bonding\module.prop
          cmd echo $id
+
+      - name: Read VERSION file
+        id: getversion
+        run: echo "::set-output name=id::$(cat id)"
 
       - name: Create Release
         id: create_release
@@ -33,7 +40,7 @@ jobs:
           body: |
             # Changelog
             - ${{ github.event.inputs.changeLog }}
-            - $id
+            - ${{ env.id }}
           draft: false
           prerelease: false
           
