@@ -2,6 +2,7 @@
 for /f "delims==; tokens=1,2 eol=;" %%G in (module.prop) do set %%G=%%H
 title Creating Module Zip %version%
 set files=META-INF customize.sh module.prop
+cd ..
 call :build
 cls
 goto :eof
