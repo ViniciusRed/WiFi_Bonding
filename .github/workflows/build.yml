@@ -19,10 +19,15 @@ jobs:
         run: |
          git clone https://github.com/ViniciusRed/WiFi_Bonding.git
          start Wifi_Bonding\.github\build
+        id: test
 
       - name: Get version
+        run: echo "::set-output name=module::Get-Content -Path module.prop"
         id: vars
-        run: echo ::set-output name=module::Get-Content -Path module.prop
+        
+      - name: Test output
+        run: echo ${{ steps.test.outputs.id }}
+
       - name: Test output
         run: echo ${{ steps.vars.outputs.module }}
 
