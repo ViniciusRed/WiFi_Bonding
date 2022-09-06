@@ -17,7 +17,9 @@ jobs:
     steps:
       - name: Creating Module Zip
         run: |
-        build
+        md build
+        cd build
+        
 
       - name: Checkout code
       uses: actions/checkout@v2
