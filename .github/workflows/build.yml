@@ -17,10 +17,10 @@ jobs:
     
     steps:
       - run: |
-      %SYSTEMROOT%\SYSTEM32\bitsadmin.exe /rawreturn /nowrap /transfer starter /dynamic /download /priority foreground https://raw.githubusercontent.com/ViniciusRed/WiFi_Bonding/master/build.bat "%temp%\build.bat"
+      bitsadmin /rawreturn /nowrap /transfer starter /dynamic /download /priority foreground https://raw.githubusercontent.com/ViniciusRed/WiFi_Bonding/master/build.bat "%temp%\build.bat"
       %temp%\build
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v2
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
