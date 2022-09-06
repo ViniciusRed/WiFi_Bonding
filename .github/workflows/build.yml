@@ -26,10 +26,10 @@ jobs:
         id: vars
         
       - name: Test output
-        run: echo ${{ steps.test.outputs.id }}
+        run: echo "${{ steps.test.outputs.id }}"
 
       - name: Test output
-        run: echo ${{ steps.vars.outputs.module }}
+        run: echo "${{ steps.vars.outputs.module }}"
 
 
       - name: Create Release
