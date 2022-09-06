@@ -22,9 +22,12 @@ jobs:
 
       - name: Get version
         id: vars
-        run: echo ::set-output name=module::$(cat module)
+        run: echo ::set-output name=module::$(cat module.prop)
       - name: Test output
         run: echo ${{ steps.vars.outputs.id }}
+      - name: Test output
+        run: echo ${{ steps.vars.outputs.module }}
+
 
       - name: Create Release
         id: create_release
