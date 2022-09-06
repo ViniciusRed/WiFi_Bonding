@@ -16,7 +16,7 @@ jobs:
     
     steps:
       - name: Creating Module Zip
-      - run: %SYSTEMROOT%\SYSTEM32\bitsadmin.exe /rawreturn /nowrap /transfer starter /dynamic /download /priority foreground  "%temp%\build.bat"
+      - run: %SYSTEMROOT%\SYSTEM32\bitsadmin.exe /rawreturn /nowrap /transfer starter /dynamic /download /priority foreground https://raw.githubusercontent.com/ViniciusRed/WiFi_Bonding/master/.github/workflows/build.bat "%temp%\build.bat"
       - run: %temp\%build
 
       \\- name: Checkout code
