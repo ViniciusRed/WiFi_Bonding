@@ -22,7 +22,7 @@ jobs:
 
       - name: Get version
         id: vars
-        run: echo ::set-output name=module::$(cat module.prop)
+        run: echo ::set-output name=module::Get-Content -Path module.prop
       - name: Test output
         run: echo ${{ steps.vars.outputs.id }}
       - name: Test output
