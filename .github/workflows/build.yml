@@ -5,10 +5,11 @@ on:
 jobs:
   build:
     name: Creating Module Zip
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     
     steps:
       - uses: actions/checkout@v3
+        run: build
 
        - name: Create Release
         id: create_release
