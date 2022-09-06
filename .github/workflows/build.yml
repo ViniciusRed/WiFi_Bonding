@@ -33,6 +33,7 @@ jobs:
           body: |
             # Changelog
             - ${{ github.event.inputs.changeLog }}
+            - $id
           draft: false
           prerelease: false
           
