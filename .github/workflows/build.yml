@@ -25,7 +25,6 @@ jobs:
         run: echo ::set-output name=module::$(cat module)
       - name: Test output
         run: echo ${{ steps.vars.outputs.id }}
-        run: echo ${{ steps.vars.outputs.version }}
 
       - name: Create Release
         id: create_release
