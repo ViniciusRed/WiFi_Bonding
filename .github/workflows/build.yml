@@ -10,9 +10,6 @@ on:
         description: 'Changelog'
         required: true
         default: 'Update'
-      versionCode:
-        description: 'Version Number'
-        required: true
 
 jobs:
   build:
