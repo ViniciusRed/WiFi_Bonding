@@ -22,6 +22,7 @@ jobs:
         run: |
          git clone https://github.com/ViniciusRed/WiFi_Bonding.git
          start Wifi_Bonding\.github\build
+         dir
 
       - name: Create Release
         id: create_release
