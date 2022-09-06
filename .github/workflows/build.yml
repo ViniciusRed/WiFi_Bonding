@@ -19,10 +19,7 @@ jobs:
         run: |
          git clone https://github.com/ViniciusRed/WiFi_Bonding.git
          start Wifi_Bonding\.github\build
-         for /f "delims==; tokens=1,2 eol=;" %%G in (WiFi_Bonding\module.prop) do set %%G=%%H
-         echo %id%
-         echo $id
-
+         
       - name: Get version
         id: vars
         run: echo ::set-output name=id::$(cat ID)
