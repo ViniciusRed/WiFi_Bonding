@@ -20,7 +20,7 @@ jobs:
          git clone https://github.com/ViniciusRed/WiFi_Bonding.git
          dir
          cd WiFi_Bonding
-         build
+         build.bat
 
       - name: Create Release
         id: create_release
