@@ -25,7 +25,7 @@ jobs:
          Get-Content -Path Wifi_Bonding\module.prop
          cmd echo $id
 
-      - name: Read VERSION file
+      - name: Get Strings
         id: getversion
         run: echo "::set-output name=id::$(cat id)"
 
