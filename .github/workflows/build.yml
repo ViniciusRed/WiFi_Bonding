@@ -9,7 +9,7 @@ jobs:
     
     steps:
       - uses: actions/checkout@v3
-      - run: build
+        run: build
 
        - name: Create Release
         id: create_release
