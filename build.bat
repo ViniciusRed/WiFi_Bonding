@@ -4,4 +4,3 @@ title Creating Module Zip %version%
 set files=META-INF customize.sh module.prop
 echo Creating Module Wifi_Bonding %version%
 7z a -mmt2 -mx9 %id%-%version%.zip %files%
-
