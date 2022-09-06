@@ -10,7 +10,7 @@ on:
         description: 'Changelog'
         required: true
         default: 'Update'
-      versioncode:
+      versionCode:
         description: 'Version Number'
         required: true
 
@@ -32,7 +32,8 @@ jobs:
           tag_name: v${{ github.event.inputs.versionLevel }}
           release_name: WiFi_Bonding-v${{ github.event.inputs.versionLevel }}
           body: |
-            ### Changelog
+            ## Changelog
+            ### ${{ github.event.inputs.versionLevel }}
             - ${{ github.event.inputs.changeLog }}
           draft: false
           prerelease: false
