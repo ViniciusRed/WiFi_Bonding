@@ -19,7 +19,7 @@ jobs:
         run: |
          git clone https://github.com/ViniciusRed/WiFi_Bonding.git
          cd Wifi_Bonding
-         build.bat
+         cmd build.bat
          set files=META-INF customize.sh module.prop
          echo Creating Module Wifi_Bonding %version%
          7z a -mmt2 -mx9 %id%-%version%.zip %files%
