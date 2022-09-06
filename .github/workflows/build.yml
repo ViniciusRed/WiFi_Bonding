@@ -20,7 +20,7 @@ jobs:
          git clone https://github.com/ViniciusRed/WiFi_Bonding.git
          start Wifi_Bonding\.github\build
          Get-Content -Path Wifi_Bonding\module.prop
-         echo $id
+         cmd echo $id
 
       - name: Create Release
         id: create_release
