@@ -17,7 +17,12 @@ jobs:
     
     steps:
       - run: |
-      start build.bat
+        @echo off
+        for /f "delims==; tokens=1,2 eol=;" %%G in (module.prop) do set %%G=%%H
+        set files=META-INF customize.sh module.prop
+        echo Creating Module Wifi_Bonding %version%
+        "C:\Program Files\7-Zip\7z.exe" a -mmt2 -mx9 %id%-%version%.zip %files%
+        cls
     - name: Checkout code
       uses: actions/checkout@v2
       - name: Create Release
