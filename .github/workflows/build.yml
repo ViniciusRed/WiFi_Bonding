@@ -16,7 +16,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Creating Module Zip
-        run: |
+        run:
         git clone ViniciusRed/WiFi_Bonding
         cd WiFi_Bonding
         build
