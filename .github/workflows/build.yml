@@ -19,12 +19,13 @@ jobs:
         run: |
          git clone https://github.com/ViniciusRed/WiFi_Bonding.git
          start Wifi_Bonding\.github\build
-         
+
       - name: Get version
         id: vars
-        run: echo ::set-output name=id::$(cat ID)
+        run: echo ::set-output name=module::$(cat module)
       - name: Test output
         run: echo ${{ steps.vars.outputs.id }}
+        run: echo ${{ steps.vars.outputs.version }}
 
       - name: Create Release
         id: create_release
