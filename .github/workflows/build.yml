@@ -16,7 +16,10 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Creating Module Zip
-        run: build.bat
+        run: |
+        git clone ViniciusRed/WiFi_Bonding
+        cd WiFi_Bonding
+        build
 
       - name: Create Release
         id: create_release
@@ -39,6 +42,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./WiFi_Bonding-v${{ github.event.inputs.versionLevel }}.zip
+          asset_path: ./WiFi_Bonding/WiFi_Bonding-v${{ github.event.inputs.versionLevel }}.zip
           asset_name: WiFi_Bonding-v${{ github.event.inputs.versionLevel }}.zip
           asset_content_type: application/zip
