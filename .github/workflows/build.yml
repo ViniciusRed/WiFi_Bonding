@@ -24,6 +24,8 @@ jobs:
          start Wifi_Bonding\.github\build
          cd Wifi_Bonding
          dir
+         cd .github
+         dir
 
       - name: Create Release
         id: create_release
