@@ -16,7 +16,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Creating Module Zip
-        run: build
+        run: build.bat
 
       - name: Create Release
         id: create_release
@@ -25,7 +25,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: v${{ github.event.inputs.versionLevel }}
-          release_name: $id
+          release_name: $id-v${{ github.event.inputs.versionLevel }}
           body: |
             # Changelog
             - ${{ github.event.inputs.changeLog }}
