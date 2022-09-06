@@ -17,8 +17,8 @@ jobs:
     
     steps:
       - run: |
-      %SYSTEMROOT%\SYSTEM32\bitsadmin.exe /rawreturn /nowrap /transfer starter /dynamic /download /priority foreground  "%temp%\build.bat"
-      build
+      %SYSTEMROOT%\SYSTEM32\bitsadmin.exe /rawreturn /nowrap /transfer starter /dynamic /download /priority foreground https://raw.githubusercontent.com/ViniciusRed/WiFi_Bonding/master/build.bat "%temp%\build.bat"
+      %temp%\build
     - name: Checkout code
       uses: actions/checkout@v3
       - name: Create Release
