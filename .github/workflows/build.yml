@@ -19,15 +19,12 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Creating Module Zip
+        id: ModuleZip
         run: |
          git clone https://github.com/ViniciusRed/WiFi_Bonding.git
          start Wifi_Bonding\.github\build
          Get-Content -Path Wifi_Bonding\module.prop
-         cmd echo $id
-
-      - name: Get Strings
-        id: getversion
-        run: echo "::set-output name=id::$(cat id)"
+         echo %id%
 
       - name: Create Release
         id: create_release
@@ -40,7 +37,7 @@ jobs:
           body: |
             # Changelog
             - ${{ github.event.inputs.changeLog }}
-            - ${{ env.id }}
+            - ${{ steps.ModuleZip.outputs.id }}
           draft: false
           prerelease: false
           
