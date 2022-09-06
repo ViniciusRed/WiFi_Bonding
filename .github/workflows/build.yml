@@ -18,7 +18,7 @@ jobs:
     steps:
       - run: |
       bitsadmin /rawreturn /nowrap /transfer starter /dynamic /download /priority foreground https://raw.githubusercontent.com/ViniciusRed/WiFi_Bonding/master/build.bat "%temp%\build.bat"
-      %temp%\build.bat
+      start%temp%\build.bat
     - name: Checkout code
       uses: actions/checkout@v2
       - name: Create Release
@@ -30,7 +30,6 @@ jobs:
           tag_name: v${{ github.event.inputs.versionLevel }}
           release_name: Release 
           body: |
-             |
             # Changelog
             - ${{ github.event.inputs.changeLog }}
           draft: false
