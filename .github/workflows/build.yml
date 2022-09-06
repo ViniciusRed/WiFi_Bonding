@@ -17,12 +17,9 @@ jobs:
     steps:
       - name: Creating Module Zip
         run: |
-        md build
-        cd build
-        %SYSTEMROOT%\SYSTEM32\bitsadmin.exe /rawreturn /nowrap /transfer starter /dynamic /download /priority foreground https://raw.githubusercontent.com/ViniciusRed/WiFi_Bonding/master/.github/workflows/build.bat build.bat
         build
 
-      \\- name: Checkout code
+      - name: Checkout code
       uses: actions/checkout@v2
       - name: Create Release
         id: create_release
