@@ -1,4 +1,4 @@
-**0.2**,
+**0.2**
 * ReBuild Module
 * Magisk Update Module added
 
